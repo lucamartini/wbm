@@ -1,0 +1,91 @@
+\input{/Users/lucamartini/Documents/Documenti/Latex/preambles/presentation_preamble.tex}
+
+\usepackage{pgf-pie}
+
+\title{BPH triggers status}
+
+\author[Luca]{Luca Martini \\ for the BPH trigger group}
+\institute[]{INFN Pisa \& Universit\`a di Pisa}
+\date{\today}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\graphicspath{{../2015_03_12_TSG_Padova/}}
+
+\begin{document}
+
+\input{/Users/lucamartini/Documents/Documenti/Latex/symbols.tex}
+
+\begin{frame}
+\ft{Rate comparisons}
+
+\begin{itemize}
+\item Estimated with run RUN
+\item Instantaneous luminosity about LUMI
+\item[$\to$] Linear scale factor FACTOR for HLT rates
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \ft{L1 menu}
+  \centering
+  \ssmall
+  \input{../table_L1}
+
+\end{frame}
+
+\begin{frame}
+  \ft{5E33 and 7E33 HLT menu}
+  \vspace{-0.5cm}
+
+  \begin{itemize}
+  \item Our paths don't change between \num{50} and \SI{25}{ns}
+  \end{itemize}
+
+  \ssmall
+  \centering
+  \input{../table_7E33_ana}
+
+\end{frame}
+
+\begin{frame}
+  \ft{HLT efficiency paths at 5E33 and 7E33}
+  \vspace{-0.5cm}
+
+  \ssmall
+  \centering
+  \input{../table_7E33_tnp}
+
+  \small
+  \begin{itemize}
+  \item We aim at $\approx\SI{1}{Hz}$ for each control path:
+  \end{itemize}
+
+  \begin{tikzpicture}
+    \pie[radius=1.5, text=legend, color={myyellow, myred0, mypurple, myblue0, mygreen0}]{50/Quarkonia, 12/Rare, 27/$B$ production, 3/DoubleQ, 8/TnP}
+  \end{tikzpicture}
+
+\end{frame}
+
+% \begin{frame}
+%   \ft{HLT summary at 1.4E34}
+%   \vspace{-0.5cm}
+
+%   \ssmall
+%   \centering
+%   \input{../table_14E33_ana}
+
+%   \begin{tikzpicture}
+%     \pie[radius=1.3, text=legend, color={myyellow, myred0, mypurple, myblue0, mygreen0}]{34/Quarkonia, 13/Rare, 44/$B$ production, 3/DoubleQ, 6/TnP}
+%   \end{tikzpicture}
+
+% \end{frame}
+
+\end{document}
